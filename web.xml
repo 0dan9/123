@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>MyProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+ 	<filter>
+ 		<filter-name>Charsetfilter</filter-name>
+ 		<filter-class>com.chinasoft.filter.CharSetFilter</filter-class>
+ 	</filter>
+ 	<filter-mapping>
+ 		<filter-name>Charsetfilter</filter-name>
+ 		<url-pattern>/*</url-pattern>
+ 	</filter-mapping>
+ 	<filter>
+ 	<filter-name>myfilter</filter-name>
+ 	<filter-class>com.chinasoft.filter.LoginFilter</filter-class>
+ 	</filter>
+ 	<filter-mapping>
+ 	<filter-name>myfilter</filter-name>
+ 	<url-pattern>/*</url-pattern>
+ 	</filter-mapping>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowStockServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.ShowStockServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PurchaseServlet</servlet-name>
+  	<servlet-class>com.chinasoft.servlet.PurchaseServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>Registr</servlet-name>
+  <servlet-class>com.chinasoft.servlet.Registr</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>YZunameServlet</servlet-name>
+    <servlet-class>com.chinasoft.servlet.YZunameServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  <servlet-name>Registr</servlet-name>
+  <url-pattern>/Registr</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ShowStockServlet</servlet-name>
+    <url-pattern>/ShowStock</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PurchaseServlet</servlet-name>
+  	<url-pattern>/PurchaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>YZunameServlet</servlet-name>
+    <url-pattern>/YZunameServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
